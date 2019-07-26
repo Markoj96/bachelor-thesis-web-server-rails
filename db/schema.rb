@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_24_204821) do
+ActiveRecord::Schema.define(version: 2019_07_24_211716) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
@@ -29,6 +29,38 @@ ActiveRecord::Schema.define(version: 2019_07_24_204821) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_users_on_name", unique: true
+  end
+
+  create_table "vehicles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "owned"
+    t.bigint "user_id"
+    t.integer "model"
+    t.float "parkX"
+    t.float "parkY"
+    t.float "parkZ"
+    t.float "parkA"
+    t.integer "color1"
+    t.integer "color2"
+    t.integer "paintjob"
+    t.integer "locked"
+    t.string "registration"
+    t.integer "spoiler"
+    t.integer "hood"
+    t.integer "roof"
+    t.integer "side_skirt"
+    t.integer "lamps"
+    t.integer "nitro"
+    t.integer "exhaust"
+    t.integer "wheels"
+    t.integer "stereo"
+    t.integer "hydraulics"
+    t.integer "front_bumper"
+    t.integer "rear_bumper"
+    t.integer "vent_right"
+    t.integer "vent_left"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_vehicles_on_user_id"
   end
 
 end
