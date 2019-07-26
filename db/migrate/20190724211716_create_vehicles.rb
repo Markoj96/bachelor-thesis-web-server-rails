@@ -27,6 +27,7 @@ class CreateVehicles < ActiveRecord::Migration[5.2]
       t.integer :rear_bumper
       t.integer :vent_right
       t.integer :vent_left
+      t.integer :status
 
       t.timestamps
     end

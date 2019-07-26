@@ -10,7 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_24_211716) do
+ActiveRecord::Schema.define(version: 2019_07_26_180448) do
+
+  create_table "houses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "owned"
+    t.bigint "user_id"
+    t.integer "price"
+    t.integer "locked"
+    t.float "enterX"
+    t.float "enterY"
+    t.float "enterZ"
+    t.float "enterA"
+    t.float "exitX"
+    t.float "exitY"
+    t.float "exitZ"
+    t.float "exitA"
+    t.integer "outside_interior"
+    t.integer "outside_virtual_world"
+    t.integer "inside_interior"
+    t.integer "inside_virtual_world"
+    t.integer "icon"
+    t.integer "materials"
+    t.integer "drugs"
+    t.integer "slot1"
+    t.integer "slot1_ammo"
+    t.integer "slot2"
+    t.integer "slot2_ammo"
+    t.integer "slot3"
+    t.integer "slot3_ammo"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_houses_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"

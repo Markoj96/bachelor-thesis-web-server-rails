@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   end
 
   resources :vehicles, only: [:index, :show]
+
+  resources :houses, only: [:index, :show]
 end
