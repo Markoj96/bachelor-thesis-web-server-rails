@@ -1,0 +1,1 @@
+json.extract! vehicle, :id, :owned, :user_id, :model, :parkX, :parkY, :parkZ, :parkA, :color1, :color2, :paintjob, :locked, :registration, :spoiler, :hood, :roof, :side_skirt, :lamps, :nitro, :exhaust, :wheels, :stereo, :hydraulics, :front_bumper, :rear_bumper, :vent_right, :vent_left
