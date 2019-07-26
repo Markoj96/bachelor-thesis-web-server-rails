@@ -1,0 +1,1 @@
+json.extract! house, :id, :owned, :user_id, :price, :locked, :enterX, :enterY, :enterZ, :enterA, :exitX, :exitY, :exitZ, :exitA, :outside_interior, :outside_virtual_world, :inside_interior, :inside_virtual_world, :icon, :materials, :drugs, :slot1, :slot1_ammo, :slot2, :slot2_ammo, :slot3, :slot3_ammo
