@@ -1,5 +1,8 @@
 class User < ApplicationRecord
   has_many :vehicles
+  has_many :houses
+  has_many :businesses
+  has_many :special_businesses
 
   has_secure_password
 
