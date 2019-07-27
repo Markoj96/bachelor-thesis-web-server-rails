@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :houses, only: [:index, :show]
 
   resources :businesses, only: [:index, :show]
+
+  resources :special_businesses, only: [:index, :show]
 end
