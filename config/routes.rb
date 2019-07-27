@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :vehicles, only: [:index, :show]
 
   resources :houses, only: [:index, :show]
+
+  resources :businesses, only: [:index, :show]
 end
