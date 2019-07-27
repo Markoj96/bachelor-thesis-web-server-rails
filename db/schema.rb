@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_26_183040) do
+ActiveRecord::Schema.define(version: 2019_07_27_115445) do
 
   create_table "businesses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "owned"
     t.bigint "user_id"
     t.string "name"
     t.integer "price"
-    t.integer "type"
+    t.integer "business_type"
     t.integer "locked"
     t.integer "money"
     t.integer "enter_fee"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_07_26_183040) do
     t.integer "outside_virtual_world"
     t.integer "inside_interior"
     t.integer "inside_virtual_world"
-    t.integer "icon"
+    t.integer "enter_icon"
     t.integer "exit_icon"
     t.integer "status"
     t.datetime "created_at", null: false
@@ -71,6 +71,24 @@ ActiveRecord::Schema.define(version: 2019_07_26_183040) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_houses_on_user_id"
+  end
+
+  create_table "special_businesses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "owned"
+    t.bigint "user_id"
+    t.string "name"
+    t.string "description"
+    t.integer "money"
+    t.integer "price"
+    t.integer "enter_fee"
+    t.float "enterX"
+    t.float "enterY"
+    t.float "enterZ"
+    t.float "enterA"
+    t.integer "icon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_special_businesses_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
