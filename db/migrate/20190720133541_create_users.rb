@@ -37,6 +37,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.integer :mobile, default: 0
       t.integer :mobile_number, default: 0
       t.integer :mobile_credit, default: 0
+      t.integer :address_book, default: 0
       t.integer :tut, default: 0
       t.integer :on_tut, default: 0
       t.integer :detective_points, default: 0

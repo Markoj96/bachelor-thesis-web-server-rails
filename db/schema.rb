@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2019_07_27_115445) do
   create_table "businesses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "owned"
     t.bigint "user_id"
-    t.string "name"
+    t.string "name", default: "Nema"
     t.integer "price"
     t.integer "business_type", default: 0
     t.integer "locked", default: 1
@@ -76,8 +76,8 @@ ActiveRecord::Schema.define(version: 2019_07_27_115445) do
   create_table "special_businesses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "owned"
     t.bigint "user_id"
-    t.string "name"
-    t.string "description"
+    t.string "name", default: "Nema"
+    t.string "description", default: "Nema"
     t.integer "money", default: 0
     t.integer "price", default: 0
     t.integer "enter_fee", default: 0
