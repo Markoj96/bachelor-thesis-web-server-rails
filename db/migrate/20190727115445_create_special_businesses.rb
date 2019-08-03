@@ -3,8 +3,8 @@ class CreateSpecialBusinesses < ActiveRecord::Migration[5.2]
     create_table :special_businesses do |t|
       t.integer :owned
       t.references :user
-      t.string :name
-      t.string :description
+      t.string :name, default: 'Nema'
+      t.string :description, default: 'Nema'
       t.integer :money, default: 0
       t.integer :price, default: 0
       t.integer :enter_fee, default: 0

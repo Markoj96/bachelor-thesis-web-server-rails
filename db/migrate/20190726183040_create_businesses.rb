@@ -3,7 +3,7 @@ class CreateBusinesses < ActiveRecord::Migration[5.2]
     create_table :businesses do |t|
       t.integer :owned
       t.references :user
-      t.string :name
+      t.string :name, default: 'Nema'
       t.integer :price
       t.integer :business_type, default: 0
       t.integer :locked, default: 1
