@@ -5,10 +5,10 @@ class CreateBusinesses < ActiveRecord::Migration[5.2]
       t.references :user
       t.string :name
       t.integer :price
-      t.integer :business_type
-      t.integer :locked
-      t.integer :money
-      t.integer :enter_fee
+      t.integer :business_type, default: 0
+      t.integer :locked, default: 1
+      t.integer :money, default: 0
+      t.integer :enter_fee, default: 0
       t.float :enterX
       t.float :enterY
       t.float :enterZ
@@ -17,13 +17,13 @@ class CreateBusinesses < ActiveRecord::Migration[5.2]
       t.float :exitY
       t.float :exitZ
       t.float :exitA
-      t.integer :outside_interior
-      t.integer :outside_virtual_world
-      t.integer :inside_interior
-      t.integer :inside_virtual_world
-      t.integer :enter_icon
-      t.integer :exit_icon
-      t.integer :status
+      t.integer :outside_interior, default: 0
+      t.integer :outside_virtual_world, default: 0
+      t.integer :inside_interior, default: 0
+      t.integer :inside_virtual_world, default: 0
+      t.integer :enter_icon, default: 0
+      t.integer :exit_icon, default: 0
+      t.integer :status, default: 0
 
       t.timestamps
     end

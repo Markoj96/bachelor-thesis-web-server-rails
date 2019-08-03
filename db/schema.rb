@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 2019_07_27_115445) do
     t.bigint "user_id"
     t.string "name"
     t.integer "price"
-    t.integer "business_type"
-    t.integer "locked"
-    t.integer "money"
-    t.integer "enter_fee"
+    t.integer "business_type", default: 0
+    t.integer "locked", default: 1
+    t.integer "money", default: 0
+    t.integer "enter_fee", default: 0
     t.float "enterX"
     t.float "enterY"
     t.float "enterZ"
@@ -29,13 +29,13 @@ ActiveRecord::Schema.define(version: 2019_07_27_115445) do
     t.float "exitY"
     t.float "exitZ"
     t.float "exitA"
-    t.integer "outside_interior"
-    t.integer "outside_virtual_world"
-    t.integer "inside_interior"
-    t.integer "inside_virtual_world"
-    t.integer "enter_icon"
-    t.integer "exit_icon"
-    t.integer "status"
+    t.integer "outside_interior", default: 0
+    t.integer "outside_virtual_world", default: 0
+    t.integer "inside_interior", default: 0
+    t.integer "inside_virtual_world", default: 0
+    t.integer "enter_icon", default: 0
+    t.integer "exit_icon", default: 0
+    t.integer "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_businesses_on_user_id"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2019_07_27_115445) do
     t.integer "owned"
     t.bigint "user_id"
     t.integer "price"
-    t.integer "locked"
+    t.integer "locked", default: 1
     t.float "enterX"
     t.float "enterY"
     t.float "enterZ"
@@ -54,19 +54,19 @@ ActiveRecord::Schema.define(version: 2019_07_27_115445) do
     t.float "exitY"
     t.float "exitZ"
     t.float "exitA"
-    t.integer "outside_interior"
-    t.integer "outside_virtual_world"
-    t.integer "inside_interior"
-    t.integer "inside_virtual_world"
-    t.integer "icon"
-    t.integer "materials"
-    t.integer "drugs"
-    t.integer "slot1"
-    t.integer "slot1_ammo"
-    t.integer "slot2"
-    t.integer "slot2_ammo"
-    t.integer "slot3"
-    t.integer "slot3_ammo"
+    t.integer "outside_interior", default: 0
+    t.integer "outside_virtual_world", default: 0
+    t.integer "inside_interior", default: 0
+    t.integer "inside_virtual_world", default: 0
+    t.integer "icon", default: 0
+    t.integer "materials", default: 0
+    t.integer "drugs", default: 0
+    t.integer "slot1", default: 0
+    t.integer "slot1_ammo", default: 0
+    t.integer "slot2", default: 0
+    t.integer "slot2_ammo", default: 0
+    t.integer "slot3", default: 0
+    t.integer "slot3_ammo", default: 0
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -78,14 +78,14 @@ ActiveRecord::Schema.define(version: 2019_07_27_115445) do
     t.bigint "user_id"
     t.string "name"
     t.string "description"
-    t.integer "money"
-    t.integer "price"
-    t.integer "enter_fee"
+    t.integer "money", default: 0
+    t.integer "price", default: 0
+    t.integer "enter_fee", default: 0
     t.float "enterX"
     t.float "enterY"
     t.float "enterZ"
     t.float "enterA"
-    t.integer "icon"
+    t.integer "icon", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_special_businesses_on_user_id"
@@ -99,12 +99,73 @@ ActiveRecord::Schema.define(version: 2019_07_27_115445) do
     t.integer "age"
     t.integer "country"
     t.integer "city"
-    t.integer "money"
+    t.integer "money", default: 50
+    t.integer "identity_card", default: 0
+    t.integer "skin", default: 297
+    t.integer "banned", default: 0
+    t.integer "banned_time", default: 0
     t.float "spawnX"
     t.float "spawnY"
     t.float "spawnZ"
     t.float "spawnA"
     t.integer "role"
+    t.integer "bank_account", default: 0
+    t.integer "bank_money", default: 0
+    t.integer "bank_credit", default: 0
+    t.integer "admin", default: 0
+    t.integer "donator", default: 0
+    t.integer "donator_points", default: 0
+    t.integer "level", default: 1
+    t.integer "respect", default: 0
+    t.integer "hours", default: 0
+    t.integer "play_time", default: 0
+    t.integer "paycheck", default: 0
+    t.integer "dead", default: 0
+    t.integer "kills", default: 0
+    t.integer "deaths", default: 0
+    t.integer "job", default: 0
+    t.integer "job_contract", default: 0
+    t.integer "mobile", default: 0
+    t.integer "mobile_number", default: 0
+    t.integer "mobile_credit", default: 0
+    t.integer "tut", default: 0
+    t.integer "on_tut", default: 0
+    t.integer "detective_points", default: 0
+    t.integer "detective_level", default: 0
+    t.integer "truckman_points", default: 0
+    t.integer "truckman_level", default: 0
+    t.integer "taxi_points", default: 0
+    t.integer "taxi_level", default: 0
+    t.integer "mechanic_points", default: 0
+    t.integer "mechanic_level", default: 0
+    t.integer "drugs", default: 0
+    t.integer "materials", default: 0
+    t.integer "org_leader", default: 0
+    t.integer "org_member", default: 0
+    t.integer "org_rank", default: 0
+    t.integer "org_skin", default: 0
+    t.integer "wanted", default: 0
+    t.integer "wanted_times", default: 0
+    t.integer "arrested", default: 0
+    t.integer "arrested_time", default: 0
+    t.integer "arrested_times", default: 0
+    t.integer "driving_licence", default: 0
+    t.integer "flying_licence", default: 0
+    t.integer "sailing_licence", default: 0
+    t.integer "muted", default: 0
+    t.integer "muted_time", default: 0
+    t.integer "pistol_skill", default: 0
+    t.integer "silenced_skill", default: 0
+    t.integer "desert_skill", default: 0
+    t.integer "shotgun_skill", default: 0
+    t.integer "sawnoff_skil", default: 0
+    t.integer "combat_skill", default: 0
+    t.integer "uzi_skill", default: 0
+    t.integer "mp5_skill", default: 0
+    t.integer "ak47_skill", default: 0
+    t.integer "m4_skill", default: 0
+    t.integer "sniper_skill", default: 0
+    t.integer "fighting_style", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_users_on_name", unique: true

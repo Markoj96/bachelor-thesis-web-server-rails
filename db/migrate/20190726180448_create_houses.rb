@@ -4,7 +4,7 @@ class CreateHouses < ActiveRecord::Migration[5.2]
       t.integer :owned
       t.references :user
       t.integer :price
-      t.integer :locked
+      t.integer :locked, default: 1
       t.float :enterX
       t.float :enterY
       t.float :enterZ
@@ -13,19 +13,19 @@ class CreateHouses < ActiveRecord::Migration[5.2]
       t.float :exitY
       t.float :exitZ
       t.float :exitA
-      t.integer :outside_interior
-      t.integer :outside_virtual_world
-      t.integer :inside_interior
-      t.integer :inside_virtual_world
-      t.integer :icon
-      t.integer :materials
-      t.integer :drugs
-      t.integer :slot1
-      t.integer :slot1_ammo
-      t.integer :slot2
-      t.integer :slot2_ammo
-      t.integer :slot3
-      t.integer :slot3_ammo
+      t.integer :outside_interior, default: 0
+      t.integer :outside_virtual_world, default: 0
+      t.integer :inside_interior, default: 0
+      t.integer :inside_virtual_world, default: 0
+      t.integer :icon, default: 0
+      t.integer :materials, default: 0
+      t.integer :drugs, default: 0
+      t.integer :slot1, default: 0
+      t.integer :slot1_ammo, default: 0
+      t.integer :slot2, default: 0
+      t.integer :slot2_ammo, default: 0
+      t.integer :slot3, default: 0
+      t.integer :slot3_ammo, default: 0
       t.integer :status # deleted or active
       # add house_weapons table
 
