@@ -1,1 +1,10 @@
-json.extract! user, :id, :name, :gender, :age, :country, :city
+json.extract! user, :id, :name, :email, :gender, :age, :country, :city, :money, :identity_card,
+              :skin, :banned, :banned_time, :spawnX, :spawnY, :spawnZ, :spawnA, :role,
+              :bank_account, :bank_money, :bank_credit, :admin, :donator, :donator_points, :level, :respect, :hours,
+              :play_time, :paycheck, :dead, :kills, :deaths, :job, :job_contract, :mobile, :mobile_number,
+              :mobile_credit, :address_book, :tut, :on_tut, :detective_points, :detective_level, :truckman_points,
+              :truckman_level, :taxi_points, :taxi_level, :mechanic_points, :mechanic_level, :drugs, :materials,
+              :org_leader, :org_member, :org_rank, :org_skin, :wanted, :wanted_times, :arrested, :arrested_time,
+              :arrested_times, :driving_licence, :flying_licence, :sailing_licence, :muted, :muted_time,
+              :pistol_skill, :silenced_skill, :desert_skill, :shotgun_skill, :sawnoff_skil, :combat_skill,
+              :uzi_skill, :mp5_skill, :ak47_skill, :m4_skill, :sniper_skill, :fighting_style

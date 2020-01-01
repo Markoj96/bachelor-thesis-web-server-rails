@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user, only: [:show]
 
   def create
     @user =  User.create(user_params)
@@ -6,6 +7,13 @@ class UsersController < ApplicationController
     @token = @user.auth_token
 
     render :show, status: :created
+  end
+
+  def show
+    @user = User.find(params[:id]);
+    authorize(@user)
+
+    render :show
   end
 
   def authenticate
